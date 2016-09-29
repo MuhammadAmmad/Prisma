@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="@dimen/rc_recent_add_item_padding"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_item_recent_add_rc"
+        android:background="@drawable/yao1"
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/rc_lib_image_size"
+        android:layout_height="@dimen/rc_lib_image_size" />
+    <TextView
+        android:id="@+id/tx_item_recent_add_rc"
+        android:padding="@dimen/text_recent_add_item_padding"
+        android:hint="ssssssssssssss"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Prisma</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--header-->
+    <string name="cancel">cancel</string>
+    <string name="next">next</string>
+    <string name="recently_add">recently add</string>
+    <!--bottom nav-->
+    <string name="library">Library</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+
+    <string name="notify">Choose an art-style you like</string>
+    <string name="share">share</string>
+    <string name="save">SAVE</string>
+
+</resources>

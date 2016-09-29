@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_styles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.compilesense.liuyi.prisma.activity.StylesActivity">
+
+    <include layout="@layout/layout_header_styles_activity"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/img_style"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_progress"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:background="@color/progress_bar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="drawing…"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/pb_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_style"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <FrameLayout
+        android:id="@+id/fl_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/notify"
+            android:minHeight="@dimen/bottom_nav_min_height"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal|top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

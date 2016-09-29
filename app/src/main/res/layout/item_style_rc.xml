@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tx_item_style_rc"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.compilesense.liuyi.prisma.view.CheckLayout
+        android:id="@+id/cl_item_style_rc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_item_style_rc"
+            android:scaleType="centerCrop"
+            android:maxWidth="@dimen/rc_style_image_size"
+            android:maxHeight="@dimen/rc_style_image_size"
+            android:layout_width="@dimen/rc_style_image_size"
+            android:layout_height="@dimen/rc_style_image_size" />
+
+    </com.compilesense.liuyi.prisma.view.CheckLayout>
+
+
+</LinearLayout>

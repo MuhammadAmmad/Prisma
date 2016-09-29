@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_bottom_nav"
+    android:minHeight="@dimen/bottom_nav_min_height"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RadioGroup
+        android:id="@+id/rg_bottom_nav"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_library"
+            android:checked="true"
+            android:text="@string/library"
+            style="@style/BottomNavRadioButtonStyle"/>
+
+        <RadioButton
+            android:id="@+id/rb_photo"
+            android:text="@string/photo"
+            style="@style/BottomNavRadioButtonStyle"/>
+
+        <RadioButton
+            android:id="@+id/rb_video"
+            android:text="@string/video"
+            style="@style/BottomNavRadioButtonStyle"/>
+
+    </RadioGroup>
+</FrameLayout>

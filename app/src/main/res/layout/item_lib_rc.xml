@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_item_lib_rc"
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/rc_lib_image_size"
+        android:layout_height="@dimen/rc_lib_image_size"
+        android:maxWidth="@dimen/rc_lib_image_size"
+        android:maxHeight="@dimen/rc_lib_image_size"/>
+
+</FrameLayout>

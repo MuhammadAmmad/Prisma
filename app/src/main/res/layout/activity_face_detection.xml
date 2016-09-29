@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:CameraBridgeViewBase="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_face_detection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.compilesense.liuyi.prisma.activity.FaceDetectionActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CameraBridgeViewBase:camera_id="front"
+        android:id="@+id/fd_activity_surface_view" />
+
+</RelativeLayout>

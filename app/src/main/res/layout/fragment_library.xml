@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.compilesense.liuyi.prisma.fragment.LibraryFragment">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_lib"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            fresco:actualImageScaleType="centerCrop"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_lib"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_bar"
+        android:background="@color/progress_bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>
+
+
+
+
