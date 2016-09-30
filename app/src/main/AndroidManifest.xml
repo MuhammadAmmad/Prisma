@@ -40,7 +40,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.FaceDetectionActivity" />
-        <activity android:name=".activity.StylesActivity"></activity>
+        <activity android:name=".activity.StylesActivity" />
+        <activity android:name=".activity.PhotoActivity"></activity>
     </application>
 
 </manifest>

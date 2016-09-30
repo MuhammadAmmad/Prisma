@@ -1,12 +1,15 @@
 package com.compilesense.liuyi.prisma.activity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -68,11 +71,13 @@ public class StylesActivity extends AppCompatActivity {
         intent.putExtra("imagePath",imageBean.path);
         context.startActivity(intent);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_styles);
         imagePath = getIntent().getStringExtra("imagePath");
+
         initView();
     }
 
@@ -81,8 +86,11 @@ public class StylesActivity extends AppCompatActivity {
         mProgressBar = (NumberProgressBar) findViewById(R.id.pb_style);
 
         ImageView imageView = (ImageView) findViewById(R.id.img_style);
+
+
         Uri uri = Uri.parse("file://" + imagePath);
         imageView.setImageURI(uri);
+
 
         initHeader();
         initBottom();
@@ -119,6 +127,7 @@ public class StylesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Utils.saveImageToGallery(StylesActivity.this, BitmapFactory.decodeFile(imagePath));
+                    showDialog();
                 }
             });
         }
@@ -176,6 +185,7 @@ public class StylesActivity extends AppCompatActivity {
         testRC();
         recyclerView.setAdapter(mAdapter);
     }
+
     void testRC(){
         List<StyleBean> styleBeen = new ArrayList<>();
         StyleBean styleBean = new StyleBean();
@@ -196,5 +206,17 @@ public class StylesActivity extends AppCompatActivity {
         styleBeen.add(styleBean);
 
         mAdapter.setStyleBeanList(styleBeen);
+    }
+
+    void showDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.had_saved);
+        builder.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

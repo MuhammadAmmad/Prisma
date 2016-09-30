@@ -65,6 +65,20 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
         super(context, attrs);
     }
 
+    /**
+     * 重写这个方法为了使view不拉伸
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = getDefaultSize(0, widthMeasureSpec);
+        int height = width * 4 / 3;
+        setMeasuredDimension(width, height);
+    }
+
+
     protected boolean initializeCamera(int width, int height) {
         Log.d(TAG, "Initialize java camera");
         boolean result = true;

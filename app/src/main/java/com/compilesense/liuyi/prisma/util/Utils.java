@@ -73,7 +73,7 @@ public class Utils {
     }
 
 
-    public static void saveImageToGallery(Context context, Bitmap bmp) {
+    public static String saveImageToGallery(Context context, Bitmap bmp) {
         // 首先保存图片
         File appDir = new File(Environment.getExternalStorageDirectory(), "prismaImage");
         if (!appDir.exists()) {
@@ -101,6 +101,8 @@ public class Utils {
         }
         // 最后通知图库更新
         context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + file.getPath())));
+
+        return file.getPath();
     }
 
 }

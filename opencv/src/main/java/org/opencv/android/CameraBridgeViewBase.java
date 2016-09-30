@@ -88,6 +88,9 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
     public void setCameraIndex(int cameraIndex) {
         this.mCameraIndex = cameraIndex;
     }
+    public int getCameraIndex(){
+        return mCameraIndex;
+    }
 
     public interface CvCameraViewListener {
         /**

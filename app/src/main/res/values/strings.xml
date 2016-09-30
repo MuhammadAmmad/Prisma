@@ -18,4 +18,10 @@
     <string name="share">share</string>
     <string name="save">SAVE</string>
 
+    <string name="had_saved">Saved to album</string>
+    <string name="ok">OK</string>
+
+    <string name="hello_blank_fragment">video coming soon…</string>
+    <string name="send_email">suggest a style</string>
+    <string name="open_web">open the website</string>
 </resources>
